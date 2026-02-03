@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sterren_MAT
-  m_Shader: {fileID: -6465566751694194690, guid: 76f25be4413a5834dbb36250f15b545c, type: 3}
+  m_Name: SterrenUnlitMAT
+  m_Shader: {fileID: -6465566751694194690, guid: ee0249a56333bf3408e68507bc6f81ba, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -38,12 +38,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BlinkingSpeed: 0.003
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _StarDensity: 100
+    - _StarPower: 50
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7677673763643294304
+--- !u!114 &4997782766638356370
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
