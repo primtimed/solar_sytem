@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SterrenUnlitMAT
+  m_Name: Sterren_unlit_MAT
   m_Shader: {fileID: -6465566751694194690, guid: ee0249a56333bf3408e68507bc6f81ba, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -15,7 +15,7 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_b5f33ab177d44d1a8e9a042c3b6f61ae_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,11 +46,13 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StarDensity: 100
-    - _StarPower: 50
-    m_Colors: []
+    - _StarPower: 20
+    m_Colors:
+    - _HorrizonColor: {r: 0.042442918, g: 0.03029547, b: 0.13962266, a: 1}
+    - _SkyColor: {r: 0.10943387, g: 0.10138116, b: 0.10138116, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4997782766638356370
+--- !u!114 &5051464851716637538
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
