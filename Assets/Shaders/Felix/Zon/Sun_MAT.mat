@@ -49,7 +49,9 @@ Material:
     - _CellDensity: 60
     - _CellSpeed: 1.3
     - _Cellscale: 0
+    - _GlowStrength: 62.46
     - _MetalicValue: 10
+    - _OutlineSize: 20
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SmoothnessValue: 0
@@ -57,6 +59,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 0.70837265, b: 0.2924527, a: 1}
     - _CellColor: {r: 0.8867924, g: 0.40480074, b: 0, a: 1}
+    - _EmmissionColor: {r: 1, g: 0.40658507, b: 0.23962256, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5604132410044816802
