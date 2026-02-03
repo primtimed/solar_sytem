@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,8 @@ public class SolarSystemCamera : MonoBehaviour
     private Vector3 basePosition;
     private Quaternion baseRotation;
     private bool returningToBase = false;
+
+    public SolarSystemManager solarSystemManager;
 
     void Awake()
     {
@@ -42,23 +45,42 @@ public class SolarSystemCamera : MonoBehaviour
 
     void FixedUpdate()
     {
+        MouseMovement();
         FocusMovement();
         ReturnToBase();
     }
 
-    void OnClick(InputAction.CallbackContext ctx)
+    GameObject sellected;
+    public void MouseMovement()
     {
-        if (hasFocus) return;
-        
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Ray ray = cam.ScreenPointToRay(mousePos);
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, celestialLayer))
         {
-            focusTarget = hit.transform.GetComponentInParent<FocusTarget>();
+            sellected = hit.transform.gameObject;
+            
+            sellected.GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
+        else if (sellected)
+        {
+            //Here will be the hover over planate shader disable
+            
+            sellected.GetComponent<MeshRenderer>().material.color = Color.white;
+            sellected = null;
+        }
+    }
+
+    void OnClick(InputAction.CallbackContext ctx)
+    {
+        if (hasFocus) return;
+
+        if (sellected)
+        {
+            focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
             {
-                returningToBase = false;
+               returningToBase = false;
 
                 currentTarget = focusTarget.transform;
                 hasFocus = focusTarget.FocusSwitch();
@@ -75,6 +97,8 @@ public class SolarSystemCamera : MonoBehaviour
     void FocusMovement()
     { 
         if (currentTarget == null) return;
+        
+        solarSystemManager.SplitPlanets(focusTarget);
 
         transform.position = Vector3.Lerp(
             transform.position,
@@ -97,6 +121,8 @@ public class SolarSystemCamera : MonoBehaviour
     {
         if (!returningToBase) return;
         
+        solarSystemManager.ReturnPlanets();
+
         targetPosition = Vector3.zero;
         focusTarget = null;
         currentTarget = null;
@@ -117,5 +143,8 @@ public class SolarSystemCamera : MonoBehaviour
         if(Vector3.Distance(transform.position, basePosition) < 5f) returningToBase = false;
     }
     
-    public void ReturnBoolSwitch() { returningToBase = true; } // Used by button
+    public void ReturnBoolSwitch() // Used by button
+    {
+        returningToBase = true;
+    }
 }
