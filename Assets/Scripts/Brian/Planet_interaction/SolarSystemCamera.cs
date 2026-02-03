@@ -55,9 +55,11 @@ public class SolarSystemCamera : MonoBehaviour
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Ray ray = cam.ScreenPointToRay(mousePos);
-
+        
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, celestialLayer))
         {
+            if (hasFocus) return;
+
             sellected = hit.transform.gameObject;
             
             sellected.GetComponent<MeshRenderer>().material.color = Color.blue;
