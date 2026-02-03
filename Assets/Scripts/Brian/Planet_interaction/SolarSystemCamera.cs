@@ -98,7 +98,7 @@ public class SolarSystemCamera : MonoBehaviour
 
     void FocusMovement()
     { 
-        if (currentTarget == null) return;
+        if (!currentTarget) return;
         
         solarSystemManager.SplitPlanets(focusTarget);
 
