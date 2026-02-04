@@ -524,6 +524,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7448362009186408084, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448362009186408084, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
+      propertyPath: CollisionModule.quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448362009186408084, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
+      propertyPath: CollisionModule.colliderForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448362009186408084, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448362009186408084, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9101749737103253071, guid: 92c7063affa9b2e48aca987260d64492, type: 3}
       propertyPath: m_Name
       value: Steenringparticle
