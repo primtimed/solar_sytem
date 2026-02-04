@@ -172,6 +172,8 @@ public class SolarSystemCamera : MonoBehaviour
         float safeDistance = focusTarget.GetSafeDistance();
         Vector3 dir = (transform.position - currentTarget.position).normalized;
         targetPosition = currentTarget.position + dir * safeDistance;
+        
+        zoomScrollbar.value = Mathf.InverseLerp(focusTarget.zoomMaxMin.x, focusTarget.zoomMaxMin.y, focusTarget.GetZoomDistance());
     }
 
     public void ZoomUi(Scrollbar sliderValue) // Used by zoom slider
