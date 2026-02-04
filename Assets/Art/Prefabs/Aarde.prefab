@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cd84f10cd22757f4890585dc3d473936, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 903af0abae09b9e428bfedc6547510aa, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a3e7c0dffa23c149a86148e4af557d6, type: 2}
     - target: {fileID: 919132149155446097, guid: cd84f10cd22757f4890585dc3d473936, type: 3}
       propertyPath: m_Name
       value: Aarde
@@ -107,6 +107,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3860759035997803456}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.011508
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.011508
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.011508
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -147,14 +159,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3de41f714893cd042be2c0290d36fed6, type: 2}
+      objectReference: {fileID: 2100000, guid: 11b548a6d35f0af48a4d653a011f0c34, type: 2}
     - target: {fileID: 919132149155446097, guid: 040b002d58509944298d76c0fe2f9f97, type: 3}
       propertyPath: m_Name
       value: AardeWolken
