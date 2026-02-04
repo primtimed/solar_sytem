@@ -52,11 +52,11 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Randje: 29.2
-    - _glowstrenght: 50
+    - _Randje: 9
+    - _glowstrenght: 10
     - _pulse_speed: 0
     m_Colors:
-    - _emmisionkleur: {r: 1, g: 1, b: 1, a: 1}
+    - _emmisionkleur: {r: 0.454902, g: 0.43921572, b: 0.38431376, a: 1}
     - _neonkleur: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
