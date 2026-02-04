@@ -549,6 +549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7515541828923522335, guid: 74952e8b7b6fe9c43abc504c5a70569e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3223b983ca13b4946a69d0e29e29693e, type: 2}
     - target: {fileID: 8308135299511016650, guid: 74952e8b7b6fe9c43abc504c5a70569e, type: 3}
       propertyPath: m_Name
       value: Mercury 1
