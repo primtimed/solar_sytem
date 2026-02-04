@@ -90,6 +90,8 @@ public class SolarSystemCamera : MonoBehaviour
 
         if (sellected)
         {
+            zoomScrollbar.gameObject.SetActive(true);
+            
             focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
             {
@@ -136,6 +138,7 @@ public class SolarSystemCamera : MonoBehaviour
         
         solarSystemManager.ReturnPlanets();
 
+        zoomScrollbar.value = .2f;
         targetPosition = Vector3.zero;
         focusTarget = null;
         currentTarget = null;
@@ -159,6 +162,7 @@ public class SolarSystemCamera : MonoBehaviour
     public void ReturnBoolSwitch() // Used by button
     {
         returningToBase = true;
+        zoomScrollbar.gameObject.SetActive(false);
     }
 
     public void Scroll(InputAction.CallbackContext ctx)
