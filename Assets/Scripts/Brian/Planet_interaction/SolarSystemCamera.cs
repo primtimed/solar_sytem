@@ -1,16 +1,19 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class SolarSystemCamera : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    public float rotateSpeed = 1f;
-    public LayerMask celestialLayer;
+    //=======================General=================================//
 
     private PlayerInputActions input;
     private Camera cam;
-
+    public LayerMask celestialLayer;
+    
+    //===================Focus on planet=============================//
+    public float moveSpeed = 1f;
+    public float rotateSpeed = 1f;
+    
     private Transform currentTarget;
     private FocusTarget focusTarget;
     private Vector3 targetPosition;
@@ -21,6 +24,10 @@ public class SolarSystemCamera : MonoBehaviour
     private bool returningToBase = false;
 
     public SolarSystemManager solarSystemManager;
+    
+    //===================Zoom on planet==============================//
+
+    public Scrollbar zoomScrollbar;
 
     void Awake()
     {
@@ -35,11 +42,15 @@ public class SolarSystemCamera : MonoBehaviour
     {
         input.Camera.Enable();
         input.Camera.Click.performed += OnClick;
+        
+        input.Camera.Scroll.performed += Scroll;
     }
 
     void OnDisable()
     {
         input.Camera.Click.performed -= OnClick;
+        input.Camera.Scroll.performed -= Scroll;
+
         input.Camera.Disable();
     }
 
@@ -79,6 +90,8 @@ public class SolarSystemCamera : MonoBehaviour
 
         if (sellected)
         {
+            zoomScrollbar.gameObject.SetActive(true);
+            
             focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
             {
@@ -125,6 +138,7 @@ public class SolarSystemCamera : MonoBehaviour
         
         solarSystemManager.ReturnPlanets();
 
+        zoomScrollbar.value = .2f;
         targetPosition = Vector3.zero;
         focusTarget = null;
         currentTarget = null;
@@ -148,5 +162,34 @@ public class SolarSystemCamera : MonoBehaviour
     public void ReturnBoolSwitch() // Used by button
     {
         returningToBase = true;
+        zoomScrollbar.gameObject.SetActive(false);
+    }
+
+    public void Scroll(InputAction.CallbackContext ctx)
+    {
+        if (!focusTarget) return;
+        
+        Vector2 scroll = ctx.ReadValue<Vector2>();
+        
+        focusTarget.ZoomDistance(-scroll.y / 10);
+        
+        float safeDistance = focusTarget.GetSafeDistance();
+        Vector3 dir = (transform.position - currentTarget.position).normalized;
+        targetPosition = currentTarget.position + dir * safeDistance;
+        
+        zoomScrollbar.value = Mathf.InverseLerp(focusTarget.zoomMaxMin.x, focusTarget.zoomMaxMin.y, focusTarget.GetZoomDistance());
+    }
+
+    public void ZoomUi(Scrollbar sliderValue) // Used by zoom slider
+    {
+        if (!focusTarget) return;
+
+        float zoomDistance = Mathf.Lerp(focusTarget.zoomMaxMin.x, focusTarget.zoomMaxMin.y, sliderValue.value);
+        
+        focusTarget.SetZoomDistance(zoomDistance);
+
+        float safeDistance = focusTarget.GetSafeDistance();
+        Vector3 dir = (transform.position - currentTarget.position).normalized;
+        targetPosition = currentTarget.position + dir * safeDistance;
     }
 }
