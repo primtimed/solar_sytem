@@ -328,6 +328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2055490030737042108, guid: 93258e2a3733d38408e57d9b14a65726, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 57cff232416d06f4ea4fa298138be888, type: 2}
     - target: {fileID: 6207287346357420145, guid: 93258e2a3733d38408e57d9b14a65726, type: 3}
       propertyPath: m_Name
       value: Saturnus
@@ -695,7 +699,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
