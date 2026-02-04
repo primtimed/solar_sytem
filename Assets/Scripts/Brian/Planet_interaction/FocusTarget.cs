@@ -68,4 +68,9 @@ public class FocusTarget : MonoBehaviour
     {
         return zoomDistance;
     }
+
+    public bool GetFocus()
+    {
+        return isFocus;
+    }
 }
