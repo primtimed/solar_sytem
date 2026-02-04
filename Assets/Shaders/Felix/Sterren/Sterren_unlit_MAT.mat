@@ -49,7 +49,7 @@ Material:
     - _StarDensity_small: 5
     - _StarPower: 20
     m_Colors:
-    - _HorrizonColor: {r: 0.042442918, g: 0.03029547, b: 0.13962266, a: 1}
+    - _HorrizonColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyColor: {r: 0.10943387, g: 0.10138116, b: 0.10138116, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
