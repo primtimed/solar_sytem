@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Randje: 10
+    - _Randje: 8
     - _glowstrenght: 10
     m_Colors:
     - _emmisionkleur: {r: 0.18245201, g: 0.1766963, b: 0.3132075, a: 1}

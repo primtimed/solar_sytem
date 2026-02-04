@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ade48361877df904889cb6b53d5a25d3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: dafcd6f6e343f71428b40c202b23cb22, type: 2}
+      objectReference: {fileID: 2100000, guid: 3223b983ca13b4946a69d0e29e29693e, type: 2}
     - target: {fileID: 919132149155446097, guid: ade48361877df904889cb6b53d5a25d3, type: 3}
       propertyPath: m_Name
       value: Mercury 1

@@ -27,22 +27,25 @@ public class SolarSystemCamera : MonoBehaviour
     
     //===================Zoom on planet==============================//
 
-    public Scrollbar zoomScrollbar;
+    private Scrollbar zoomScrollbar;
 
     void Awake()
     {
         cam = Camera.main;
+        zoomScrollbar = cam.GetComponentInChildren<Scrollbar>();
         input = new PlayerInputActions();
 
         basePosition = transform.position;
         baseRotation = transform.rotation;
+
+        zoomScrollbar.gameObject.SetActive(false);
     }
 
     void OnEnable()
     {
         input.Camera.Enable();
-        input.Camera.Click.performed += OnClick;
         
+        input.Camera.Click.performed += OnClick;
         input.Camera.Scroll.performed += Scroll;
     }
 
