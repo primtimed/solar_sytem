@@ -20,6 +20,7 @@ public class SolarSystemCamera : MonoBehaviour
     private FocusTarget focusTarget;
     private Vector3 targetPosition;
     private bool hasFocus = false;
+    private Button backButton;
     
     private Vector3 basePosition;
     private Quaternion baseRotation;
@@ -43,12 +44,14 @@ public class SolarSystemCamera : MonoBehaviour
     {
         cam = Camera.main;
         zoomScrollbar = cam.GetComponentInChildren<Scrollbar>();
+        backButton = cam.GetComponentInChildren<Button>();
         input = new PlayerInputActions();
 
         basePosition = transform.position;
         baseRotation = transform.rotation;
 
         zoomScrollbar.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(false);
     }
 
     void OnEnable()
@@ -115,6 +118,7 @@ public class SolarSystemCamera : MonoBehaviour
         if (sellected)
         {
             zoomScrollbar.gameObject.SetActive(true);
+            backButton.gameObject.SetActive(true);
             
             focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
@@ -187,6 +191,7 @@ public class SolarSystemCamera : MonoBehaviour
     {
         returningToBase = true;
         zoomScrollbar.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(false);
     }
 
     //===================Zoom on planet==============================//
