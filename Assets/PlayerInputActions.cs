@@ -109,6 +109,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RotateDelta"",
+                    ""type"": ""Value"",
+                    ""id"": ""5cdd71df-e8ac-4688-bb74-42e1944109c3"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -131,6 +140,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Scroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64ed9685-6600-4c08-9ee8-2cecde1e0735"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RotateDelta"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -204,6 +224,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Click = m_Camera.FindAction("Click", throwIfNotFound: true);
         m_Camera_Scroll = m_Camera.FindAction("Scroll", throwIfNotFound: true);
+        m_Camera_RotateDelta = m_Camera.FindAction("RotateDelta", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -286,6 +307,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_Click;
     private readonly InputAction m_Camera_Scroll;
+    private readonly InputAction m_Camera_RotateDelta;
     /// <summary>
     /// Provides access to input actions defined in input action map "Camera".
     /// </summary>
@@ -305,6 +327,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Camera/Scroll".
         /// </summary>
         public InputAction @Scroll => m_Wrapper.m_Camera_Scroll;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/RotateDelta".
+        /// </summary>
+        public InputAction @RotateDelta => m_Wrapper.m_Camera_RotateDelta;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -337,6 +363,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Scroll.started += instance.OnScroll;
             @Scroll.performed += instance.OnScroll;
             @Scroll.canceled += instance.OnScroll;
+            @RotateDelta.started += instance.OnRotateDelta;
+            @RotateDelta.performed += instance.OnRotateDelta;
+            @RotateDelta.canceled += instance.OnRotateDelta;
         }
 
         /// <summary>
@@ -354,6 +383,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Scroll.started -= instance.OnScroll;
             @Scroll.performed -= instance.OnScroll;
             @Scroll.canceled -= instance.OnScroll;
+            @RotateDelta.started -= instance.OnRotateDelta;
+            @RotateDelta.performed -= instance.OnRotateDelta;
+            @RotateDelta.canceled -= instance.OnRotateDelta;
         }
 
         /// <summary>
@@ -473,5 +505,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnScroll(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RotateDelta" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRotateDelta(InputAction.CallbackContext context);
     }
 }
