@@ -35,7 +35,6 @@ public class SolarSystemCamera : MonoBehaviour
 
     public float planetRotateSpeed = 0.1f;
 
-    private bool rotationStartedOnPlanet = false;
     private bool isRotatingPlanet = false;
     private Vector2 rotateDelta;
 
@@ -224,34 +223,29 @@ public class SolarSystemCamera : MonoBehaviour
 
     void OnRotateStart(InputAction.CallbackContext ctx)
     {
-        if (!hasFocus || !currentTarget) return;
+        if (!hasFocus || !currentTarget || !sellected) return;
         
-        if (sellected)
+        if (sellected.transform == currentTarget || sellected.transform.IsChildOf(currentTarget))
         {
-            if (sellected.transform == currentTarget || sellected.transform.IsChildOf(currentTarget))
-            {
-                rotationStartedOnPlanet = true;
-                isRotatingPlanet = true;
-            }
+            isRotatingPlanet = true;
         }
     }
     
     void OnRotateEnd(InputAction.CallbackContext ctx)
     {
         isRotatingPlanet = false;
-        rotationStartedOnPlanet = false;
         rotateDelta = Vector2.zero;
     }
     
     void OnRotateDelta(InputAction.CallbackContext ctx)
     {
-        if (!isRotatingPlanet || !rotationStartedOnPlanet) return;
+        if (!isRotatingPlanet) return;
         rotateDelta = ctx.ReadValue<Vector2>();
     }
     
     void RotatePlanet()
     {
-        if (!isRotatingPlanet || !rotationStartedOnPlanet || !currentTarget) return;
+        if (!isRotatingPlanet || !currentTarget) return;
 
         Vector2 rotation = rotateDelta * planetRotateSpeed;
 
