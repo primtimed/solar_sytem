@@ -10,6 +10,8 @@ public class SolarSystemCamera : MonoBehaviour
     private Camera cam;
     public LayerMask celestialLayer;
     
+    private GameObject sellected;
+    
     //===================Focus on planet=============================//
     public float moveSpeed = 1f;
     public float rotateSpeed = 1f;
@@ -25,9 +27,18 @@ public class SolarSystemCamera : MonoBehaviour
 
     public SolarSystemManager solarSystemManager;
     
-    //===================Zoom on planet==============================//
+    //===================Zoom on planet============================//
 
     private Scrollbar zoomScrollbar;
+    
+    //===================Rotation planet==============================//
+
+    public float planetRotateSpeed = 0.1f;
+
+    private bool rotationStartedOnPlanet = false;
+    private bool isRotatingPlanet = false;
+    private Vector2 rotateDelta;
+
 
     void Awake()
     {
@@ -44,9 +55,13 @@ public class SolarSystemCamera : MonoBehaviour
     void OnEnable()
     {
         input.Camera.Enable();
-        
+
         input.Camera.Click.performed += OnClick;
         input.Camera.Scroll.performed += Scroll;
+
+        input.Camera.Click.performed += OnRotateStart;
+        input.Camera.Click.canceled += OnRotateEnd;
+        input.Camera.RotateDelta.performed += OnRotateDelta;
     }
 
     void OnDisable()
@@ -54,17 +69,25 @@ public class SolarSystemCamera : MonoBehaviour
         input.Camera.Click.performed -= OnClick;
         input.Camera.Scroll.performed -= Scroll;
 
+        input.Camera.Click.performed -= OnRotateStart;
+        input.Camera.Click.canceled -= OnRotateEnd;
+        input.Camera.RotateDelta.performed -= OnRotateDelta;
+
         input.Camera.Disable();
     }
+
 
     void FixedUpdate()
     {
         MouseMovement();
         FocusMovement();
         ReturnToBase();
+        RotatePlanet();
     }
 
-    GameObject sellected;
+    
+    //===================Focus on planet=============================//
+
     public void MouseMovement()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
@@ -72,10 +95,9 @@ public class SolarSystemCamera : MonoBehaviour
         
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, celestialLayer))
         {
-            if (hasFocus) return;
-
             sellected = hit.transform.gameObject;
             
+            if (hasFocus) return;
             sellected.GetComponent<MeshRenderer>().material.color = Color.blue;
         }
         else if (sellected)
@@ -168,6 +190,8 @@ public class SolarSystemCamera : MonoBehaviour
         zoomScrollbar.gameObject.SetActive(false);
     }
 
+    //===================Zoom on planet==============================//
+
     public void Scroll(InputAction.CallbackContext ctx)
     {
         if (!focusTarget) return;
@@ -194,5 +218,44 @@ public class SolarSystemCamera : MonoBehaviour
         float safeDistance = focusTarget.GetSafeDistance();
         Vector3 dir = (transform.position - currentTarget.position).normalized;
         targetPosition = currentTarget.position + dir * safeDistance;
+    }
+    
+    //===================Rotation planet==============================//
+
+    void OnRotateStart(InputAction.CallbackContext ctx)
+    {
+        if (!hasFocus || !currentTarget) return;
+        
+        if (sellected)
+        {
+            if (sellected.transform == currentTarget || sellected.transform.IsChildOf(currentTarget))
+            {
+                rotationStartedOnPlanet = true;
+                isRotatingPlanet = true;
+            }
+        }
+    }
+    
+    void OnRotateEnd(InputAction.CallbackContext ctx)
+    {
+        isRotatingPlanet = false;
+        rotationStartedOnPlanet = false;
+        rotateDelta = Vector2.zero;
+    }
+    
+    void OnRotateDelta(InputAction.CallbackContext ctx)
+    {
+        if (!isRotatingPlanet || !rotationStartedOnPlanet) return;
+        rotateDelta = ctx.ReadValue<Vector2>();
+    }
+    
+    void RotatePlanet()
+    {
+        if (!isRotatingPlanet || !rotationStartedOnPlanet || !currentTarget) return;
+
+        Vector2 rotation = rotateDelta * planetRotateSpeed;
+
+        currentTarget.Rotate(Vector3.up, -rotation.x, Space.World);
+        currentTarget.Rotate(Vector3.right, rotation.y, Space.World);
     }
 }
