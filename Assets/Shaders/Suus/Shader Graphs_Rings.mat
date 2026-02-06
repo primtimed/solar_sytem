@@ -41,9 +41,9 @@ Material:
     - _Binnenkant: -45.8
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _size: 2.5
+    - _size: 6.37
     m_Colors:
-    - _Color: {r: 128, g: 126.309425, b: 126.309425, a: 1}
+    - _Color: {r: 4, g: 3.9471695, b: 3.9471695, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4540009081428099453
