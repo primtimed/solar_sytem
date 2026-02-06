@@ -43,6 +43,9 @@ public class SolarSystemCamera : MonoBehaviour
     
     //===================Interaction hotspot==============================//
     private InteractionHotspot interactionHotspot;
+    
+    //===================Zoom solar system============================//
+    public Vector2 zoomMaxMin;
 
 
     void Awake()
@@ -55,7 +58,7 @@ public class SolarSystemCamera : MonoBehaviour
 
         basePosition = transform.position;
         baseRotation = transform.rotation;
-
+        
         zoomScrollbar.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
         interactionHotspot.enabled = false;
@@ -91,8 +94,6 @@ public class SolarSystemCamera : MonoBehaviour
         input.Camera.Disable();
     }
 
-
-
     void FixedUpdate()
     {
         MouseMovement();
@@ -101,8 +102,6 @@ public class SolarSystemCamera : MonoBehaviour
         RotatePlanet();
         PanSolarSystem();
     }
-
-
     
     //===================Focus on planet=============================//
 
@@ -134,7 +133,7 @@ public class SolarSystemCamera : MonoBehaviour
         if (sellected)
         {
             interactionHotspot.enabled = true;
-            
+            cam.fieldOfView = 60; // set field of view to default for planet zoom
             zoomScrollbar.gameObject.SetActive(true);
             backButton.gameObject.SetActive(true);
             
@@ -217,34 +216,50 @@ public class SolarSystemCamera : MonoBehaviour
 
     public void Scroll(InputAction.CallbackContext ctx)
     {
-        if (!focusTarget) return;
-        
         Vector2 scroll = ctx.ReadValue<Vector2>();
-        
-        focusTarget.ZoomDistance(-scroll.y / 10);
-        
-        float safeDistance = focusTarget.GetSafeDistance();
-        Vector3 dir = (transform.position - currentTarget.position).normalized;
-        targetPosition = currentTarget.position + dir * safeDistance;
-        
-        zoomScrollbar.value = Mathf.InverseLerp(focusTarget.zoomMaxMin.x, focusTarget.zoomMaxMin.y, focusTarget.GetZoomDistance());
+
+        if (!focusTarget)
+        {
+            cam.fieldOfView += scroll.y;
+            cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, zoomMaxMin.x, zoomMaxMin.y);
+        }
+        else
+        {
+            focusTarget.ZoomDistance(-scroll.y / 10f);
+
+            float safeDistance = focusTarget.GetSafeDistance();
+            Vector3 dir = (transform.position - currentTarget.position).normalized;
+            targetPosition = currentTarget.position + dir * safeDistance;
+
+            zoomScrollbar.value = Mathf.InverseLerp(
+                focusTarget.zoomMaxMin.x,
+                focusTarget.zoomMaxMin.y,
+                focusTarget.GetZoomDistance()
+            );
+        }
     }
+
 
     public void ZoomUi(Scrollbar sliderValue) // Used by zoom slider
     {
-        if (!focusTarget) return;
-
         float zoomDistance = Mathf.Lerp(focusTarget.zoomMaxMin.x, focusTarget.zoomMaxMin.y, sliderValue.value);
         
-        focusTarget.SetZoomDistance(zoomDistance);
+        if (!focusTarget)
+        {
+            
+        }
+        
+        else
+        {
+            focusTarget.SetZoomDistance(zoomDistance);
 
-        float safeDistance = focusTarget.GetSafeDistance();
-        Vector3 dir = (transform.position - currentTarget.position).normalized;
-        targetPosition = currentTarget.position + dir * safeDistance;
+            float safeDistance = focusTarget.GetSafeDistance();
+            Vector3 dir = (transform.position - currentTarget.position).normalized;
+            targetPosition = currentTarget.position + dir * safeDistance;
+        }
     }
     
     //===================Rotation planet==============================//
-
     void OnRotateStart(InputAction.CallbackContext ctx)
     {
         if (!hasFocus || !currentTarget || !sellected) return;
