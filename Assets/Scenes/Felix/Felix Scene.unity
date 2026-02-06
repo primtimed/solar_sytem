@@ -651,6 +651,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSpot UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.975
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.8355556
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.62375
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.18222223
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -61
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -74
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
     - target: {fileID: 2491535044769653418, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_text
       value: 'Mercurius is de binnenste planeet van ons zonnestelsel.
@@ -664,6 +696,10 @@ PrefabInstance:
         Het
         gebrek aan een atmosfeer en de extreme temperatuurverschillen zorgen ervoor
         dat Mercurius zich waarschijnlijk niet leent voor leven.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943471459492064417, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310979345521036567, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
@@ -749,28 +785,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6890253335265531336, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_text
-      value: "De zon is een 4.7 biljoenen jaren oud gasbol.\n\nOngeveer 60% van het
-        gas van de zon zit in de kern samengeperst bij een temperatuur van 15 miljoen
-        \xB0C.\n\nDe zon is ontstaan uit het samenkrimpen van een grote interstellaire
-        gaswolk onder invloed van eigen zwaartekracht."
-      objectReference: {fileID: 0}
     - target: {fileID: 7510323598747832890, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798480236161443756, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.6313726
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798480236161443756, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.47058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798480236161443756, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.38431373
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
