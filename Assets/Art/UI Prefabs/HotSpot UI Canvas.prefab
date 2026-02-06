@@ -546,7 +546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6339105823853759772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -594,7 +594,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: neptunus info
+  m_text: 'Neptunus heeft de snelste winden in ons zonnestelsel, met snelheden tot
+    wel 2.100 kilometer per uur. Op grote hoogte kunnen de windsnelheden oplopen
+    tot meer dan 1770 km/u. Dat is anderhalf keer sneller dan de geluidssnelheid.
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -926,7 +931,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: saturnus
+  m_text: Er zijn 145 maantjes ontdekt rond Saturnus, het bezit ook het meest massieve
+    en indrukwekkende ringenstelsel dat in ons zonnestelsel is te vinden. Het ring
+    bestaat uit ijs, rots en stof, waarvan 99,9% is waterijs. Ze worden geschat op
+    10 tot 100 miljoenen jaren out te zijn.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1602,7 +1610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8623597842039019497
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2079,7 +2087,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: uranus
+  m_text: Uranus ervaart extreme seizoenen door zijn 98 graden gekantelde as. Uranus
+    staat 2,8 miljard kilometer van de zon, hierdoor is het 214 onder de nul graden
+    boven de wolken. Door de gekantelde as is het voor 42 jaar lang donker en 42
+    jaar licht aan de polen.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4417,7 +4428,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mars info
+  m_text: 'Er zijn voor het eerst sporen gevonden van oeroude rivieren op mars. Deze
+    rivieren zijn gespeculeerd te stromen ongeveer 3,7 miljard jaren geleden.
+
+
+    Daarnaast
+    zijn er ook sporen van bewegend ijs te vinden, zoals gletsjers en de overblijfselen
+    daarvan:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -5383,7 +5400,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jupiter info
+  m_text: 'De Grote Rode Vlek van Jupiter is een gigantische, eeuwenoud storm en
+    waarschijnlijk de bekendste atmosferische structuur van ons zonnestelsel.
+
+
+    Het
+    is de afgelopen eeuw vrij gekrompen van ruim 40.000 km in de 19e eeuw naar minder
+    dan 16.500 kilometer.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -7826,7 +7849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1232393120294199224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7875,7 +7898,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: De Theophilus-krater is een prominente, diepe inslagkrater op de maan.
-    Met een diepte van 4200 meter en dikke buiten wanden.
+    Met een diepte van 4200 meter en dikke buiten wanden. Het is ontstaan tussen
+    3,2 en 1,1 miljard jaar geleden.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
