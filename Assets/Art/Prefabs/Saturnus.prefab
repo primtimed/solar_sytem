@@ -616,15 +616,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.4825006
+      value: 3.0244777
       objectReference: {fileID: 0}
     - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.4825006
+      value: 3.0244777
       objectReference: {fileID: 0}
     - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.482501
+      value: 3.024478
       objectReference: {fileID: 0}
     - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,10 +673,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7095242307942052990}
+    - targetCorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4882439109539346475}
   m_SourcePrefab: {fileID: 100100000, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
 --- !u!4 &5191805076039445372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
   m_PrefabInstance: {fileID: 4984113143397993797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6076556179832055788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+  m_PrefabInstance: {fileID: 4984113143397993797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7095242307942052990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076556179832055788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa0789339e16ff44ad5b8a7a1858523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlagInfo
+  scenename: Saturnus
+--- !u!65 &4882439109539346475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076556179832055788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.268765, z: 1}
+  m_Center: {x: 2.7209257e-10, y: 0.6343847, z: -0.000000045254875}

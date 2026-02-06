@@ -5,9 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Semm/SemmScene.unity
+    guid: 30becdca6371290419064cc3940c3144
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Aarde.unity
+    guid: ed77486f7e9f339499b1df88dfd20fb7
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Maan.unity
+    guid: ff1194fb8b6a1c344b95ed2ca7966194
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Mercurius.unity
+    guid: 5e9925140524eac42bbf812f8f4dbbd2
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Venus.unity
+    guid: 9b5b311879cd16844ac5b219e86cfd04
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Saturnus.unity
+    guid: ea4ea8e1204f1e442863207670491245
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Mars.unity
+    guid: 61d243c8e230c3944a1a6bfb04d340a8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

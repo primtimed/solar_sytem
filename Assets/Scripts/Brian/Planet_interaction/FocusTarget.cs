@@ -1,7 +1,8 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class FocusTarget : MonoBehaviour
-{
+{ 
     public float cameraPadding = 1.5f;
     public float splitDistance = 10f;
     

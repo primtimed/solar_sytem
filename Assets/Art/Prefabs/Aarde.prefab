@@ -113,6 +113,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 2182308996771741905}
     m_Modifications:
     - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.29289
+      objectReference: {fileID: 0}
+    - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.29289
+      objectReference: {fileID: 0}
+    - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.29289
+      objectReference: {fileID: 0}
+    - target: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5630035
       objectReference: {fileID: 0}
@@ -159,13 +171,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 325182985154903990}
+    - targetCorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3582670043083542935}
   m_SourcePrefab: {fileID: 100100000, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
 --- !u!4 &4713759658711245942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 947971758406854201, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
   m_PrefabInstance: {fileID: 5498187222521578063}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6715465162745342182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1260836207367023273, guid: 7f0c35cb63b5c354894f918263bd426b, type: 3}
+  m_PrefabInstance: {fileID: 5498187222521578063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &325182985154903990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715465162745342182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa0789339e16ff44ad5b8a7a1858523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlagInfo
+  scenename: Aarde
+--- !u!65 &3582670043083542935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715465162745342182}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.9271505, z: 1}
+  m_Center: {x: 0.00000022965811, y: 0.46357623, z: 0.000000016403195}
 --- !u!1001 &8804713698583185937
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -220,6 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9173493954424977209}
+  - component: {fileID: 5724566475964320462}
+  - component: {fileID: 8894302350390413641}
   m_Layer: 0
   m_Name: Vlag
   m_TagString: Untagged
@@ -237,12 +239,46 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.52438855, y: -0, z: -0, w: 0.8514791}
   m_LocalPosition: {x: 0, y: 1.0790001, z: 2.1420002}
-  m_LocalScale: {x: 0.50000006, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.13937502, y: 0.139375, z: 0.139375}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6673376338150155449}
   m_Father: {fileID: 7672141300595018426}
   m_LocalEulerAnglesHint: {x: 63.254, y: 0, z: 0}
+--- !u!114 &5724566475964320462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869383530363177616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa0789339e16ff44ad5b8a7a1858523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlagInfo
+  scenename: Mercurius
+--- !u!65 &8894302350390413641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869383530363177616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.2327828, z: 1}
+  m_Center: {x: 0, y: 0.61639047, z: -7.119496e-10}
 --- !u!1 &8308135299511016650
 GameObject:
   m_ObjectHideFlags: 0
