@@ -154,7 +154,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 25, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20603230
 MonoBehaviour:
@@ -425,7 +425,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 800}
+  m_SizeDelta: {x: 45, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187842077
 MonoBehaviour:
@@ -1864,7 +1864,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2182308996771741905, guid: 20a8d1985c93cd745b07116c666cb8e9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3860759035997803456, guid: 20a8d1985c93cd745b07116c666cb8e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1163041711}
     m_AddedComponents:
@@ -2182,7 +2182,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1271730699}
-  m_Father: {fileID: 2138973816}
+  m_Father: {fileID: 1729853034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165766840
 GameObject:
@@ -2969,11 +2969,6 @@ MonoBehaviour:
   cameraPadding: 1.4
   splitDistance: 100
   zoomMaxMin: {x: 0.4, y: 1.9}
---- !u!4 &2138973816 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2182308996771741905, guid: 20a8d1985c93cd745b07116c666cb8e9, type: 3}
-  m_PrefabInstance: {fileID: 875185662}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
