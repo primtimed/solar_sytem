@@ -651,37 +651,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSpot UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 258673361801314401, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 688255929672555719, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.975
+      value: 0.98375005
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.8355556
+      value: 0.9533334
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.62375
+      value: 0.61125
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.18222223
+      value: 0.34888887
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -61
+      value: -78
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -74
+      value: -52
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.5
+      value: -32.2
       objectReference: {fileID: 0}
     - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 987316653948092665, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: uranus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054518391125968316, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175037190729308540, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2491535044769653418, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_text
@@ -703,7 +723,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310979345521036567, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492673632608766209, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: maan info
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761468391263229042, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: Mars info
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966942995640139256, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: Jupiter info
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9362501
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.8266667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.57250005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.21111111
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 13.016632
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389930313231578525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399602916005954352, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: saturnus
       objectReference: {fileID: 0}
     - target: {fileID: 4657236317389915696, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_Pivot.x
@@ -785,9 +853,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7510323598747832890, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+    - target: {fileID: 4689059088163916708, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761464461341873525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727828889839498201, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: neptunus info
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050978450955803900, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222650912424951498, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_text
+      value: De piramiden zijn een van de oudste bouwwerken op onze planeet. In de
+        piramide werd een farao begraven. Alle piramides van Egypte liggen ten westen
+        van de Nijl. De piramides van Egypte zijn meer dan 4.500 jaar oud, gebouwd
+        tussen ongeveer 2700 v.Chr. en 1700 v.Chr.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510323598747832890, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573049471514081470, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597443851783060395, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624387832189515571, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 269.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624387832189515571, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 27.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856458942989369547, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093864210415934978, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
