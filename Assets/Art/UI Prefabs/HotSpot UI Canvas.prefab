@@ -458,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6339105823853759772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -506,9 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: neptunus info
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -717,7 +715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1601173837809438580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -765,9 +763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: saturnus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1010,7 +1006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -24.699997, y: 34}
+  m_AnchoredPosition: {x: 269.9, y: 27.8}
   m_SizeDelta: {x: 50, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &167267334615699326
@@ -1719,7 +1715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6404413125962739875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1767,9 +1763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: uranus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2379,7 +2373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4389930313231578525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2406,10 +2400,10 @@ RectTransform:
   - {fileID: 7529515149982941810}
   m_Father: {fileID: 4657236317389915696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6412501, y: 0.5}
-  m_AnchorMax: {x: 0.6412501, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: -20}
-  m_SizeDelta: {x: 220, y: 220}
+  m_AnchorMin: {x: 0.57250005, y: 0.21111111}
+  m_AnchorMax: {x: 0.9362501, y: 0.8266667}
+  m_AnchoredPosition: {x: 13.016632, y: -28.5}
+  m_SizeDelta: {x: -71, y: -57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6240561621304317194
 CanvasRenderer:
@@ -4046,7 +4040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6664678280527659981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4094,9 +4088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: Mars info
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4938,7 +4930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7078624136107391387
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4986,9 +4978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: Jupiter info
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -6450,7 +6440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &833005197580954472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6477,10 +6467,10 @@ RectTransform:
   - {fileID: 8247425755787569712}
   m_Father: {fileID: 4657236317389915696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.62375, y: 0.18222223}
-  m_AnchorMax: {x: 0.975, y: 0.8355556}
-  m_AnchoredPosition: {x: 9.5, y: -25}
-  m_SizeDelta: {x: -61, y: -74}
+  m_AnchorMin: {x: 0.61125, y: 0.34888887}
+  m_AnchorMax: {x: 0.98375005, y: 0.9533334}
+  m_AnchoredPosition: {x: -32.2, y: -25}
+  m_SizeDelta: {x: -78, y: -52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7594134371303956269
 CanvasRenderer:
@@ -6802,7 +6792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1182720508256449373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7061,7 +7051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1265538515106402520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7111,6 +7101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: De piramiden zijn een van de oudste bouwwerken op onze planeet. In de piramide
     werd een farao begraven. Alle piramides van Egypte liggen ten westen van de Nijl.
+    De piramides van Egypte zijn meer dan 4.500 jaar oud, gebouwd tussen ongeveer
+    2700 v.Chr. en 1700 v.Chr.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -7198,7 +7190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1232393120294199224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7246,9 +7238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mercurius kent enorme temperatuur-verschillen tussen dag en nacht. Overdag
-    loopt de temperatuur op tot zo\u2019n 426\xB0 Celsius en \u2018s nachts tot -173\xB0
-    Celsius."
+  m_text: maan info
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

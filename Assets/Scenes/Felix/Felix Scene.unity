@@ -651,10 +651,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HotSpot UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 258673361801314401, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 688255929672555719, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -687,10 +683,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -32.2
       objectReference: {fileID: 0}
-    - target: {fileID: 833005197580954472, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -25
-      objectReference: {fileID: 0}
     - target: {fileID: 987316653948092665, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_text
       value: uranus
@@ -700,24 +692,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2175037190729308540, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2491535044769653418, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_text
-      value: 'Mercurius is de binnenste planeet van ons zonnestelsel.
-
-
-        Net
-        als de maan heeft Mercurius geen atmosfeer, maar alleen een dunne exosfeer.
-        Deze bestaat voornamelijk uit zuurstof, natrium, waterstof, helium en kalium.
-
-
-        Het
-        gebrek aan een atmosfeer en de extreme temperatuurverschillen zorgen ervoor
-        dat Mercurius zich waarschijnlijk niet leent voor leven.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2943471459492064417, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -853,10 +827,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4689059088163916708, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4761464461341873525, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -879,10 +849,6 @@ PrefabInstance:
     - target: {fileID: 7510323598747832890, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7573049471514081470, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7597443851783060395, guid: c8e08493c33f10941bfb6b3b4edb99ce, type: 3}
       propertyPath: m_IsActive
