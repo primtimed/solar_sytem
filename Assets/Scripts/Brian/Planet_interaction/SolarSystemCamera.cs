@@ -40,6 +40,9 @@ public class SolarSystemCamera : MonoBehaviour
     public float panSpeed = 250f;
     private Vector2 panInput;
     public Vector2 maxpan;
+    
+    //===================Interaction hotspot==============================//
+    private InteractionHotspot interactionHotspot;
 
 
     void Awake()
@@ -47,6 +50,7 @@ public class SolarSystemCamera : MonoBehaviour
         cam = Camera.main;
         zoomScrollbar = cam.GetComponentInChildren<Scrollbar>();
         backButton = cam.GetComponentInChildren<Button>();
+        interactionHotspot = cam.GetComponent<InteractionHotspot>();
         input = new PlayerInputActions();
 
         basePosition = transform.position;
@@ -54,6 +58,7 @@ public class SolarSystemCamera : MonoBehaviour
 
         zoomScrollbar.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
+        interactionHotspot.enabled = false;
     }
 
     void OnEnable()
@@ -128,6 +133,8 @@ public class SolarSystemCamera : MonoBehaviour
 
         if (sellected)
         {
+            interactionHotspot.enabled = true;
+            
             zoomScrollbar.gameObject.SetActive(true);
             backButton.gameObject.SetActive(true);
             
@@ -182,6 +189,7 @@ public class SolarSystemCamera : MonoBehaviour
         focusTarget = null;
         currentTarget = null;
         hasFocus = false;
+        interactionHotspot.enabled = false;
         
         transform.position = Vector3.Lerp(
             transform.position,
