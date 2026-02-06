@@ -1225,7 +1225,8 @@ MonoBehaviour:
   solarSystemManager: {fileID: 1165766842}
   planetRotateSpeed: 0.1
   panSpeed: 150
-  maxpan: {x: 300, y: 100}
+  maxpan: {x: 400, y: 50}
+  zoomMaxMin: {x: 25, y: 70}
 --- !u!114 &725984468
 MonoBehaviour:
   m_ObjectHideFlags: 0
