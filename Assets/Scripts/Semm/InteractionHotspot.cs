@@ -27,19 +27,17 @@ public class InteractionHotspot : MonoBehaviour
 
     public void HotspotInteract(InputAction.CallbackContext ctx)
     {
-
         Vector2 mousePos = Mouse.current.position.ReadValue();
-        Debug.Log(mousePos);
-
         Ray ray = cam.ScreenPointToRay(mousePos);
 
-        Debug.Log(ray);
-
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
-        { 
-            string sceneName = hit.collider.GetComponent<FlagInfo>().scenename;
-            Debug.Log("Doet het");
-            SceneManager.LoadScene(sceneName);
+        {
+            if (hit.collider.GetComponent<FlagInfo>())
+            {
+                string sceneName = hit.collider.GetComponent<FlagInfo>().scenename;
+                SceneManager.LoadScene(sceneName);
+            }
+            
         }
     }
 }
