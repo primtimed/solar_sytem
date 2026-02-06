@@ -39,9 +39,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Binnenkant: -45.8
+    - _Oppacity: 484.4
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _size: 6.37
+    - _flicker: 1.98
+    - _size: 5.41
     m_Colors:
     - _Color: {r: 4, g: 3.9471695, b: 3.9471695, a: 1}
   m_BuildTextureStacks: []
