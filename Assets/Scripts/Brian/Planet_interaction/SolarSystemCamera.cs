@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class SolarSystemCamera : MonoBehaviour
 {
     //=======================General=================================//
-
     private PlayerInputActions input;
     private Camera cam;
     public LayerMask celestialLayer;
@@ -29,15 +28,18 @@ public class SolarSystemCamera : MonoBehaviour
     public SolarSystemManager solarSystemManager;
     
     //===================Zoom on planet============================//
-
     private Scrollbar zoomScrollbar;
     
     //===================Rotation planet==============================//
-
     public float planetRotateSpeed = 0.1f;
 
     private bool isRotatingPlanet = false;
     private Vector2 rotateDelta;
+    
+    //===================Pan solar system==============================//
+    public float panSpeed = 250f;
+    private Vector2 panInput;
+    public Vector2 maxpan;
 
 
     void Awake()
@@ -64,6 +66,9 @@ public class SolarSystemCamera : MonoBehaviour
         input.Camera.Click.performed += OnRotateStart;
         input.Camera.Click.canceled += OnRotateEnd;
         input.Camera.RotateDelta.performed += OnRotateDelta;
+
+        input.Camera.Pan.performed += OnPan;
+        input.Camera.Pan.canceled += OnPanCancel;
     }
 
     void OnDisable()
@@ -75,8 +80,12 @@ public class SolarSystemCamera : MonoBehaviour
         input.Camera.Click.canceled -= OnRotateEnd;
         input.Camera.RotateDelta.performed -= OnRotateDelta;
 
+        input.Camera.Pan.performed -= OnPan;
+        input.Camera.Pan.canceled -= OnPanCancel;
+
         input.Camera.Disable();
     }
+
 
 
     void FixedUpdate()
@@ -85,7 +94,9 @@ public class SolarSystemCamera : MonoBehaviour
         FocusMovement();
         ReturnToBase();
         RotatePlanet();
+        PanSolarSystem();
     }
+
 
     
     //===================Focus on planet=============================//
@@ -257,4 +268,45 @@ public class SolarSystemCamera : MonoBehaviour
         currentTarget.Rotate(Vector3.up, -rotation.x, Space.World);
         currentTarget.Rotate(Vector3.right, rotation.y, Space.World);
     }
+    
+    //===================Pan solar system==============================//
+    void OnPan(InputAction.CallbackContext ctx)
+    {
+        panInput = ctx.ReadValue<Vector2>();
+    }
+
+    void OnPanCancel(InputAction.CallbackContext ctx)
+    {
+        panInput = Vector2.zero;
+    }
+
+    void PanSolarSystem()
+    {
+        if (hasFocus) return;
+
+        Vector3 right = transform.right;
+        Vector3 up = transform.up;
+
+        Vector3 move = (right * panInput.x + up * panInput.y) * panSpeed * Time.deltaTime;
+        Vector3 newPos = transform.position + move;
+
+        float clampedX = Mathf.Clamp(
+            newPos.x,
+            basePosition.x - maxpan.x,
+            basePosition.x + maxpan.x
+        );
+        float clampedY = Mathf.Clamp(
+            newPos.y,
+            basePosition.y - maxpan.y,
+            basePosition.y + maxpan.y
+        );
+
+        transform.position = new Vector3(
+            clampedX,
+            clampedY,
+            newPos.z
+        );
+    }
+
+
 }
