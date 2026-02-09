@@ -103,6 +103,8 @@ public class SolarSystemCamera : MonoBehaviour
         ReturnToBase();
         RotatePlanet();
         PanSolarSystem();
+
+        //solarSystemManager.CameraLoc(hasFocus);
     }
     
     //===================Focus on planet=============================//
@@ -157,25 +159,25 @@ public class SolarSystemCamera : MonoBehaviour
             }
         }
     }
-
+    
     void FocusMovement()
     { 
         if (!currentTarget) return;
         
         solarSystemManager.SplitPlanets(focusTarget);
-
-        transform.position = Vector3.Lerp(
-            transform.position,
+            
+        solarSystemManager.statFiewLoc.position = Vector3.Lerp(
+            solarSystemManager.statFiewLoc.position,
             targetPosition,
             Time.deltaTime * moveSpeed
         );
 
         Quaternion lookRot = Quaternion.LookRotation(
-            currentTarget.position - transform.position
+            currentTarget.position - solarSystemManager.statFiewLoc.position
         );
 
-        transform.rotation = Quaternion.Lerp(
-            transform.rotation,
+        solarSystemManager.statFiewLoc.rotation = Quaternion.Lerp(
+            solarSystemManager.statFiewLoc.rotation,
             lookRot,
             Time.deltaTime * rotateSpeed
         );
@@ -194,19 +196,19 @@ public class SolarSystemCamera : MonoBehaviour
         hasFocus = false;
         interactionHotspot.enabled = false;
         
-        transform.position = Vector3.Lerp(
-            transform.position,
+        solarSystemManager.statFiewLoc.position = Vector3.Lerp(
+            solarSystemManager.statFiewLoc.position,
             basePosition,
             Time.deltaTime * moveSpeed
         );
 
-        transform.rotation = Quaternion.Lerp(
-            transform.rotation,
+        solarSystemManager.statFiewLoc.rotation = Quaternion.Lerp(
+            solarSystemManager.statFiewLoc.rotation,
             baseRotation,
             Time.deltaTime * rotateSpeed
         );
         
-        if(Vector3.Distance(transform.position, basePosition) < 5f) returningToBase = false;
+        if(Vector3.Distance(solarSystemManager.statFiewLoc.position, basePosition) < 5f) returningToBase = false;
     }
     
     public void ReturnBoolSwitch() // Used by button
@@ -220,6 +222,8 @@ public class SolarSystemCamera : MonoBehaviour
 
     public void Scroll(InputAction.CallbackContext ctx)
     {
+        if (solarSystemManager.rotating) return;
+        
         Vector2 scroll = ctx.ReadValue<Vector2>();
 
         if (!focusTarget)
@@ -309,13 +313,13 @@ public class SolarSystemCamera : MonoBehaviour
 
     void PanSolarSystem()
     {
-        if (hasFocus) return;
+        if (hasFocus || !solarSystemManager.rotating) return;
 
-        Vector3 right = transform.right;
-        Vector3 up = transform.up;
+        Vector3 right = solarSystemManager.statFiewLoc.right;
+        Vector3 up = solarSystemManager.statFiewLoc.up;
 
         Vector3 move = (right * panInput.x + up * panInput.y) * panSpeed * Time.deltaTime;
-        Vector3 newPos = transform.position + move;
+        Vector3 newPos = solarSystemManager.statFiewLoc.position + move;
 
         float clampedX = Mathf.Clamp(
             newPos.x,
@@ -328,12 +332,10 @@ public class SolarSystemCamera : MonoBehaviour
             basePosition.y + maxpan.y
         );
 
-        transform.position = new Vector3(
+        solarSystemManager.statFiewLoc.position = new Vector3(
             clampedX,
             clampedY,
             newPos.z
         );
     }
-
-
 }
