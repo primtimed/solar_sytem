@@ -64,5 +64,7 @@ public class SolarSystemManager : MonoBehaviour
     public void RotateSwitch() // Used by button
     {
         rotating = !rotating;
+
+        Camera.main.fieldOfView = 60; // reset fov
     }
 }
