@@ -1,4 +1,4 @@
-using UnityEditor.SearchService;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FocusTarget : MonoBehaviour
@@ -6,15 +6,48 @@ public class FocusTarget : MonoBehaviour
     public float cameraPadding = 1.5f;
     public float splitDistance = 10f;
     
-    public Vector2 zoomMaxMin = new Vector2(0.5f, 2f);
+    public Vector2 zoomMaxMin;
     private float zoomDistance;
 
     private bool isFocus = false;
+    public bool orbiting = false;
+
     private Vector3 originalLocalPosition;
+
+    public float rotationSpeed = 20f;
+
+    public Transform center;
+    public Transform target;
+    
+    private TrailRenderer trail;
 
     void Awake()
     {
         originalLocalPosition = transform.localPosition;
+
+        if (orbiting)
+        {
+            trail = this.AddComponent<TrailRenderer>();
+            trail.startWidth = 10f;
+            trail.endWidth = 10f;
+            trail.time = 100f;
+            
+            Material trailMat = new Material(Shader.Find("Unlit/Color"));
+            trailMat.color = Color.white;
+            trail.material = trailMat;
+        }
+    }
+
+    void Update()
+    {
+        if (orbiting && center != null)
+        {
+            target.transform.RotateAround(
+                center.position,
+                Vector3.up,
+                rotationSpeed * Time.deltaTime
+            );
+        }
     }
 
     public float GetSafeDistance()
@@ -29,13 +62,16 @@ public class FocusTarget : MonoBehaviour
     public bool FocusSwitch()
     {
         isFocus = !isFocus;
-        zoomDistance = 1; // reset the zoom
-        
+        zoomDistance = 1;
+
+        orbiting = !isFocus;
         return isFocus;
     }
 
     public void SplitFrom(Vector3 focusPoint)
     {
+        orbiting = false;
+
         Vector3 dir = (transform.position - focusPoint).normalized;
         Vector3 targetWorldPos = transform.position + dir * splitDistance;
 
@@ -53,6 +89,11 @@ public class FocusTarget : MonoBehaviour
             originalLocalPosition,
             Time.deltaTime * 1.5f
         );
+
+        if (Vector3.Distance(transform.localPosition, originalLocalPosition) < 0.01f)
+        {
+            orbiting = true;
+        }
     }
 
     public void ZoomDistance(float zoom)
