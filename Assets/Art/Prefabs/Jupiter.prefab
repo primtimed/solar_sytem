@@ -93,9 +93,17 @@ PrefabInstance:
       value: Jupiter
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: c7c62be7649883e41bad1b7770533986, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: c7c62be7649883e41bad1b7770533986, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 46f78376de8d9d747b2054a2d7d550b7, type: 2}
+    - target: {fileID: 6317578925029434746, guid: c7c62be7649883e41bad1b7770533986, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f1546e190be49c409bef2c72988b949, type: 2}
     - target: {fileID: 6782932385595392191, guid: c7c62be7649883e41bad1b7770533986, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.96

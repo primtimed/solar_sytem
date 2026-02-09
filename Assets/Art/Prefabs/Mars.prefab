@@ -184,9 +184,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f29ed623a6227ee4abe35670378d424b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f29ed623a6227ee4abe35670378d424b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5cf925c32618e1c439145a05d66267a2, type: 2}
+    - target: {fileID: -7511558181221131132, guid: f29ed623a6227ee4abe35670378d424b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 38cd323d68b21914e881acdcaffb215e, type: 2}
     - target: {fileID: 919132149155446097, guid: f29ed623a6227ee4abe35670378d424b, type: 3}
       propertyPath: m_Name
       value: Mars

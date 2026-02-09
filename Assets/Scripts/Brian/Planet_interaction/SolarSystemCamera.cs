@@ -62,6 +62,8 @@ public class SolarSystemCamera : MonoBehaviour
         zoomScrollbar.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
         interactionHotspot.enabled = false;
+
+    
     }
 
     void OnEnable()
@@ -115,13 +117,15 @@ public class SolarSystemCamera : MonoBehaviour
             sellected = hit.transform.gameObject;
             
             if (hasFocus) return;
-            sellected.GetComponent<MeshRenderer>().material.color = Color.blue;
+            Material mat = sellected.GetComponent<MeshRenderer>().materials[1];
+            mat.SetFloat("_Hover", 1f);
         }
         else if (sellected)
         {
             //Here will be the hover over planate shader disable
-            
-            sellected.GetComponent<MeshRenderer>().material.color = Color.white;
+
+            Material mat = sellected.GetComponent<MeshRenderer>().materials[1];
+            mat.SetFloat("_Hover", 0f);
             sellected = null;
         }
     }
