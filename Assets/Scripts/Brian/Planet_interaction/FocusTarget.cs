@@ -63,22 +63,19 @@ public class FocusTarget : MonoBehaviour
     {
         isFocus = !isFocus;
         zoomDistance = 1;
-
-        orbiting = !isFocus;
+        
         return isFocus;
     }
 
     public void SplitFrom(Vector3 focusPoint)
     {
-        orbiting = false;
-
         Vector3 dir = (transform.position - focusPoint).normalized;
         Vector3 targetWorldPos = transform.position + dir * splitDistance;
 
         transform.position = Vector3.Lerp(
             transform.position,
             targetWorldPos,
-            Time.deltaTime * 1.5f
+            Time.deltaTime * 1f
         );
     }
 
@@ -87,13 +84,8 @@ public class FocusTarget : MonoBehaviour
         transform.localPosition = Vector3.Lerp(
             transform.localPosition,
             originalLocalPosition,
-            Time.deltaTime * 1.5f
+            Time.deltaTime * 50f
         );
-
-        if (Vector3.Distance(transform.localPosition, originalLocalPosition) < 0.01f)
-        {
-            orbiting = true;
-        }
     }
 
     public void ZoomDistance(float zoom)

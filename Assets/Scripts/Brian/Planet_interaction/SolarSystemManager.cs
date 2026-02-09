@@ -60,6 +60,7 @@ public class SolarSystemManager : MonoBehaviour
         );
     }
 
+
     public void RotateSwitch() // Used by button
     {
         rotating = !rotating;

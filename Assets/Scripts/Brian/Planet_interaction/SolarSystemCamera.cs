@@ -19,7 +19,6 @@ public class SolarSystemCamera : MonoBehaviour
     private FocusTarget focusTarget;
     private Vector3 targetPosition;
     private bool hasFocus = false;
-    private Button backButton;
     
     private Vector3 basePosition;
     private Quaternion baseRotation;
@@ -47,23 +46,23 @@ public class SolarSystemCamera : MonoBehaviour
     //===================Zoom solar system============================//
     public Vector2 zoomMaxMin;
 
+    //===================UI elements============================//
+    public GameObject SolarButton; 
+    public GameObject backButton; 
 
     void Awake()
     {
         cam = Camera.main;
         zoomScrollbar = cam.GetComponentInChildren<Scrollbar>();
-        backButton = cam.GetComponentInChildren<Button>();
         interactionHotspot = cam.GetComponent<InteractionHotspot>();
         input = new PlayerInputActions();
 
-        basePosition = transform.position;
-        baseRotation = transform.rotation;
+        basePosition = solarSystemManager.statFiewLoc.position;
+        baseRotation = solarSystemManager.statFiewLoc.rotation;
         
         zoomScrollbar.gameObject.SetActive(false);
-        backButton.gameObject.SetActive(false);
+        backButton.SetActive(false);
         interactionHotspot.enabled = false;
-
-    
     }
 
     void OnEnable()
@@ -103,8 +102,6 @@ public class SolarSystemCamera : MonoBehaviour
         ReturnToBase();
         RotatePlanet();
         PanSolarSystem();
-
-        //solarSystemManager.CameraLoc(hasFocus);
     }
     
     //===================Focus on planet=============================//
@@ -142,6 +139,7 @@ public class SolarSystemCamera : MonoBehaviour
             cam.fieldOfView = 60; // set field of view to default for planet zoom
             zoomScrollbar.gameObject.SetActive(true);
             backButton.gameObject.SetActive(true);
+            SolarButton.SetActive(false);
             
             focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
@@ -188,13 +186,6 @@ public class SolarSystemCamera : MonoBehaviour
         if (!returningToBase) return;
         
         solarSystemManager.ReturnPlanets();
-
-        zoomScrollbar.value = .2f;
-        targetPosition = Vector3.zero;
-        focusTarget = null;
-        currentTarget = null;
-        hasFocus = false;
-        interactionHotspot.enabled = false;
         
         solarSystemManager.statFiewLoc.position = Vector3.Lerp(
             solarSystemManager.statFiewLoc.position,
@@ -208,12 +199,20 @@ public class SolarSystemCamera : MonoBehaviour
             Time.deltaTime * rotateSpeed
         );
         
-        if(Vector3.Distance(solarSystemManager.statFiewLoc.position, basePosition) < 5f) returningToBase = false;
+        if(Vector3.Distance(solarSystemManager.statFiewLoc.position, basePosition) < 1f) returningToBase = false;
+        
+        zoomScrollbar.value = .2f;
+        targetPosition = Vector3.zero;
+        focusTarget = null;
+        currentTarget = null;
+        hasFocus = false;
+        interactionHotspot.enabled = false;
     }
     
     public void ReturnBoolSwitch() // Used by button
     {
         returningToBase = true;
+        SolarButton.SetActive(true);
         zoomScrollbar.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
     }
@@ -313,7 +312,7 @@ public class SolarSystemCamera : MonoBehaviour
 
     void PanSolarSystem()
     {
-        if (hasFocus || !solarSystemManager.rotating) return;
+        if (hasFocus) return;
 
         Vector3 right = solarSystemManager.statFiewLoc.right;
         Vector3 up = solarSystemManager.statFiewLoc.up;
