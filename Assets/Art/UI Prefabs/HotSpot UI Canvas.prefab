@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6582310340220247945}
         m_TargetAssemblyTypeName: TerugNaarHelal, Assembly-CSharp
         m_MethodName: Terug
         m_Mode: 1

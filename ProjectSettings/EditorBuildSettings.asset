@@ -32,6 +32,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Brian/Pan/Pan.unity
     guid: d9a0fb4503584d343adb057670b94da4
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Uranus.unity
+    guid: 8f8becab315e54447843aae9dbc6bd3c
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Jupiter.unity
+    guid: b2fb1b5a9af3dd841b9545d8bebb1fd1
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Neptunes.unity
+    guid: 629fb022cf1c1a249a4bb1063b2359c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
