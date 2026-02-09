@@ -61,7 +61,17 @@
             "m_Id": "9b6cb78f7a4f47f892ebd0cadfd3430f"
         }
     ],
-    "m_GroupDatas": [],
+    "m_GroupDatas": [
+        {
+            "m_Id": "f1f6bf0662104156b52abeb51c5e2065"
+        },
+        {
+            "m_Id": "76b24de6b36d4de9a79c3b95e6378c5d"
+        },
+        {
+            "m_Id": "748a95c52b464534810e44ce6b4b988b"
+        }
+    ],
     "m_StickyNoteDatas": [],
     "m_Edges": [
         {
@@ -424,17 +434,17 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "201a9f12011b44c9876ba7de6718b786",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Property",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -889.6000366210938,
-            "y": 253.59999084472657,
+            "x": -1840.80029296875,
+            "y": 90.39999389648438,
             "width": 102.4000244140625,
-            "height": 33.60005187988281
+            "height": 33.59999084472656
         }
     },
     "m_Slots": [
@@ -500,17 +510,17 @@
     "m_Type": "UnityEditor.ShaderGraph.NormalVectorNode",
     "m_ObjectId": "33cabd3664ac4318844f63c68232472f",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Normal Vector",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -992.800048828125,
-            "y": 85.59999084472656,
-            "width": 205.60003662109376,
-            "height": 128.00003051757813
+            "x": -1943.2003173828125,
+            "y": -69.60000610351563,
+            "width": 205.5999755859375,
+            "height": 128.00001525878907
         }
     },
     "m_Slots": [
@@ -729,6 +739,28 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "748a95c52b464534810e44ce6b4b988b",
+    "m_Title": "lijnn creeren",
+    "m_Position": {
+        "x": -1968.800048828125,
+        "y": -438.4000549316406
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "76b24de6b36d4de9a79c3b95e6378c5d",
+    "m_Title": "aan/ uit lijn",
+    "m_Position": {
+        "x": -1184.4434814453125,
+        "y": -71.87845611572266
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "76f01482a9b5424e92585611c76bd0eb",
     "m_Name": "",
@@ -822,17 +854,17 @@
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "9a658bf18af2488f9b737509a1e60ff0",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Add",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -346.3999938964844,
-            "y": -64.80001831054688,
-            "width": 207.99998474121095,
-            "height": 301.5999755859375
+            "x": -677.5999145507813,
+            "y": -205.6000518798828,
+            "width": 207.99996948242188,
+            "height": 301.60003662109377
         }
     },
     "m_Slots": [
@@ -865,17 +897,17 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "9b6cb78f7a4f47f892ebd0cadfd3430f",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Property",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -685.60009765625,
-            "y": 516.800048828125,
-            "width": 107.20001220703125,
-            "height": 33.5999755859375
+            "x": -1312.8001708984375,
+            "y": 62.4000129699707,
+            "width": 108.0,
+            "height": 33.59999465942383
         }
     },
     "m_Slots": [
@@ -1070,17 +1102,17 @@
     "m_Type": "UnityEditor.ShaderGraph.PositionNode",
     "m_ObjectId": "aae224cfdf2c4208b9abcc895768740b",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Position",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -671.2000122070313,
-            "y": -64.80001831054688,
-            "width": 206.4000244140625,
-            "height": 128.00001525878907
+            "x": -941.5999145507813,
+            "y": -377.60003662109377,
+            "width": 205.5999755859375,
+            "height": 128.00003051757813
         }
     },
     "m_Slots": [
@@ -1251,16 +1283,16 @@
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "e64468251df74969ad1a895e6175708d",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -775.2001342773438,
-            "y": 171.20001220703126,
-            "width": 208.00006103515626,
+            "x": -1708.7999267578125,
+            "y": -31.199983596801759,
+            "width": 208.0,
             "height": 301.6000061035156
         }
     },
@@ -1294,17 +1326,17 @@
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "e68c4d3a805f4fc294d3903937c2c3cb",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "748a95c52b464534810e44ce6b4b988b"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -531.2000732421875,
-            "y": 322.4000549316406,
-            "width": 208.00006103515626,
-            "height": 301.5999450683594
+            "x": -1182.400146484375,
+            "y": -31.199995040893556,
+            "width": 208.0,
+            "height": 301.6000061035156
         }
     },
     "m_Slots": [
@@ -1364,6 +1396,17 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Tangent"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "f1f6bf0662104156b52abeb51c5e2065",
+    "m_Title": "dikte lijn",
+    "m_Position": {
+        "x": -1724.56103515625,
+        "y": -76.8627700805664
+    }
 }
 
 {

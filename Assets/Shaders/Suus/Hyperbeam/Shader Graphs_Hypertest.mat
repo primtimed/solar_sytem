@@ -57,7 +57,7 @@ Material:
     - _QueueOffset: 0
     - _Scrollspeed: 0.003
     m_Colors:
-    - _InnerColor: {r: 0.9924528, g: 0.9868352, b: 0.9868352, a: 1}
+    - _InnerColor: {r: 1, g: 0.92506105, b: 0.60188675, a: 1}
     - _OuterColor: {r: 1, g: 0.26981127, b: 0.26981127, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
