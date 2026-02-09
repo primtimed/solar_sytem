@@ -49,7 +49,7 @@ Material:
     - _CellDensity: 50
     - _CellSpeed: 3.5
     - _Cellscale: 0
-    - _GlowStrength: 15
+    - _GlowStrength: 80
     - _MetalicValue: 2
     - _OutlineSize: 6
     - _QueueControl: 0
