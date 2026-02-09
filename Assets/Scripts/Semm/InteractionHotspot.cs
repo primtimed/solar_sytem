@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,8 @@ public class InteractionHotspot : MonoBehaviour
 {
     private PlayerInputActions input;
     private Camera cam;
+    private string sceneName;
+    public GameObject hyperBeam;
 
     public void Awake()
     {
@@ -34,10 +37,17 @@ public class InteractionHotspot : MonoBehaviour
         {
             if (hit.collider.GetComponent<FlagInfo>())
             {
-                string sceneName = hit.collider.GetComponent<FlagInfo>().scenename;
-                SceneManager.LoadScene(sceneName);
+                sceneName = hit.collider.GetComponent<FlagInfo>().scenename;
+                hyperBeam.SetActive(true);
+                StartCoroutine(HyperBeam());
             }
             
         }
+    }
+
+    IEnumerator HyperBeam()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(sceneName);
     }
 }
