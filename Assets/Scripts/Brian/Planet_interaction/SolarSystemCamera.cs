@@ -27,7 +27,7 @@ public class SolarSystemCamera : MonoBehaviour
     public SolarSystemManager solarSystemManager;
     
     //===================Zoom on planet============================//
-    private Scrollbar zoomScrollbar;
+    public Scrollbar zoomScrollbar;
     
     //===================Rotation planet==============================//
     public float planetRotateSpeed = 0.1f;
@@ -53,7 +53,6 @@ public class SolarSystemCamera : MonoBehaviour
     void Awake()
     {
         cam = Camera.main;
-        zoomScrollbar = cam.GetComponentInChildren<Scrollbar>();
         interactionHotspot = cam.GetComponent<InteractionHotspot>();
         input = new PlayerInputActions();
 
