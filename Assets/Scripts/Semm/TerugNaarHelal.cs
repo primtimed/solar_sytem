@@ -19,7 +19,7 @@ public class TerugNaarHelal : MonoBehaviour
     public IEnumerator Hyperbeam()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Pan");
+        SceneManager.LoadScene("LiveRotation");
     }
 
     public void CloseMenus()
