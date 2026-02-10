@@ -4,19 +4,26 @@ using UnityEngine;
 public class SolarSystemManager : MonoBehaviour
 {
     private FocusTarget[] allTargets;
+    
+    public FocusTarget[] rotatingPlanets;
+    public Vector2[] size;
 
     public GameObject rotation;
     public GameObject stat;
     public bool rotating = false;
+    public bool realSize = false;
 
     public Transform rotateFiewLoc;
     public Transform statFiewLoc;
     
     public float cameraLerpSpeed = 2f;
 
+    public GameObject ScaleButton;
+
     void Awake()
     {
         allTargets = FindObjectsOfType<FocusTarget>();
+        rotatingPlanets = rotation.GetComponentsInChildren<FocusTarget>();
     }
 
     public void SplitPlanets(FocusTarget focused)
@@ -58,13 +65,51 @@ public class SolarSystemManager : MonoBehaviour
             targetRot,
             Time.deltaTime * cameraLerpSpeed
         );
+
+        if (rotating)
+        {
+            ScaleButton.SetActive(true);
+        }
+        else
+        {
+            ScaleButton.SetActive(false);
+        }
     }
 
 
     public void RotateSwitch() // Used by button
     {
         rotating = !rotating;
+        
+        realSize = true;
+        ScaleSwitch();
 
         Camera.main.fieldOfView = 60; // reset fov
     }
+
+    public void ScaleSwitch()
+    {
+        if (rotating)
+        {
+            if (realSize)
+            {
+                for (int i = 0; i < rotatingPlanets.Length; i++)
+                {
+                    rotatingPlanets[i].transform.localScale = new Vector3(size[i].x, size[i].x, size[i].x);
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < rotatingPlanets.Length; i++)
+                {
+                    rotatingPlanets[i].transform.localScale = new Vector3(size[i].y, size[i].y, size[i].y);                
+                }            
+            }
+            
+            realSize = !realSize;
+        }
+    }
+    
+    
 }
