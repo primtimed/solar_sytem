@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SolarSystemManager : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class SolarSystemManager : MonoBehaviour
     
     public void StartFiew()
     {
-        rotating = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ReturnPlanets()
