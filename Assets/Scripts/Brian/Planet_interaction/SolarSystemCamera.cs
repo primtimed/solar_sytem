@@ -140,7 +140,6 @@ public class SolarSystemCamera : MonoBehaviour
             zoomScrollbar.gameObject.SetActive(true);
             backButton.gameObject.SetActive(true);
             SolarButton.SetActive(false);
-            
             focusTarget = sellected.transform.GetComponentInParent<FocusTarget>();
             if (focusTarget != null)
             {

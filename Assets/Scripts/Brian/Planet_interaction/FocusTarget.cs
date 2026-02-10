@@ -22,6 +22,8 @@ public class FocusTarget : MonoBehaviour
     private TrailRenderer trail;
     public Material trailMat;
 
+    public GameObject UI;
+
     void Awake()
     {
         originalLocalPosition = transform.localPosition;
@@ -62,6 +64,11 @@ public class FocusTarget : MonoBehaviour
     {
         isFocus = !isFocus;
         zoomDistance = 1;
+        
+        if (isFocus && !orbiting)
+        {
+            UI.gameObject.SetActive(true);
+        }
         
         return isFocus;
     }

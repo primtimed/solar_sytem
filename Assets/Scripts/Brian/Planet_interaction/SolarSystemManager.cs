@@ -110,6 +110,15 @@ public class SolarSystemManager : MonoBehaviour
             realSize = !realSize;
         }
     }
-    
+
+    public void BackButton()
+    {
+        TerugNaarHelal[] ui = stat.GetComponentsInChildren<TerugNaarHelal>();
+
+        foreach (TerugNaarHelal element in ui)
+        {
+            element.gameObject.SetActive(false);
+        }
+    }
     
 }
