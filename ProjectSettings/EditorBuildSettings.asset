@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hotspots/Neptunes.unity
     guid: 629fb022cf1c1a249a4bb1063b2359c5
+  - enabled: 1
+    path: Assets/Scenes/Hotspots/Zon.unity
+    guid: d9da457d9b6af1247ad1318426b1af67
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
