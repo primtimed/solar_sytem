@@ -20,6 +20,7 @@ public class FocusTarget : MonoBehaviour
     public Transform target;
     
     private TrailRenderer trail;
+    public Material trailMat;
 
     void Awake()
     {
@@ -32,8 +33,6 @@ public class FocusTarget : MonoBehaviour
             trail.endWidth = 10f;
             trail.time = 100f;
             
-            Material trailMat = new Material(Shader.Find("Unlit/Color"));
-            trailMat.color = Color.white;
             trail.material = trailMat;
         }
     }

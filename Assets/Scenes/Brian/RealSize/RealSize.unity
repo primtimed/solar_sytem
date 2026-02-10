@@ -395,6 +395,7 @@ MonoBehaviour:
   rotationSpeed: 47.87
   center: {fileID: 1411852378}
   target: {fileID: 56971639}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!1 &102235874
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +861,7 @@ MonoBehaviour:
   rotationSpeed: 9.69
   center: {fileID: 1411852378}
   target: {fileID: 19036594}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!135 &332683522
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1213,6 +1215,7 @@ MonoBehaviour:
   rotationSpeed: 6.81
   center: {fileID: 1411852378}
   target: {fileID: 664174761}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!1001 &442189721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,6 +1376,7 @@ MonoBehaviour:
   rotationSpeed: 29.78
   center: {fileID: 1411852378}
   target: {fileID: 442189722}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!4 &442189727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2182308996771741905, guid: 20a8d1985c93cd745b07116c666cb8e9, type: 3}
@@ -1423,6 +1427,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!1 &473652647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1489,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!135 &489859466
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1799,6 +1805,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!1001 &629619112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1956,6 +1963,7 @@ MonoBehaviour:
   rotationSpeed: 0
   center: {fileID: 442189727}
   target: {fileID: 629619118}
+  trailMat: {fileID: 0}
 --- !u!4 &629619118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 947692043428242141, guid: 954cb9c1eeaaaf04e9050f710f8300f0, type: 3}
@@ -2142,7 +2150,7 @@ Camera:
   m_GameObject: {fileID: 725984462}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2715,6 +2723,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!135 &768873999
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3265,6 +3274,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!135 &1018553357
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3485,6 +3495,7 @@ MonoBehaviour:
   rotationSpeed: 35.02
   center: {fileID: 1411852378}
   target: {fileID: 1496487373}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!1 &1044479468
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3708,7 @@ MonoBehaviour:
   rotationSpeed: 13.07
   center: {fileID: 1411852378}
   target: {fileID: 1707827826}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!1001 &1123360927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4475,6 +4487,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!1 &1657252095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4807,6 +4820,7 @@ MonoBehaviour:
   rotationSpeed: 24.07
   center: {fileID: 1411852378}
   target: {fileID: 672794610}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!135 &1815256081
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4961,6 +4975,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!1 &1886048004
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,6 +5192,7 @@ MonoBehaviour:
   rotationSpeed: 5.43
   center: {fileID: 1411852378}
   target: {fileID: 1886048005}
+  trailMat: {fileID: 2100000, guid: a04fb03a3725f7840929b76edde5a446, type: 2}
 --- !u!135 &2115353211
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5243,6 +5259,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!4 &2120452492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49f4a1d93aa286444b50022144e5dbdf, type: 3}
@@ -5298,6 +5315,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!1 &2138973808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1513999837967178347, guid: 20a8d1985c93cd745b07116c666cb8e9, type: 3}
@@ -5343,6 +5361,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!1001 &812623665483238741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5597,6 +5616,7 @@ MonoBehaviour:
   rotationSpeed: 20
   center: {fileID: 0}
   target: {fileID: 0}
+  trailMat: {fileID: 0}
 --- !u!23 &3614361888404761213
 MeshRenderer:
   m_ObjectHideFlags: 0
