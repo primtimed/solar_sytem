@@ -24,19 +24,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Hotspots/Mercurius.unity
     guid: 5e9925140524eac42bbf812f8f4dbbd2
   - enabled: 1
-    path: Assets/Scenes/Hotspots/Venus.unity
+    path: Assets/Scenes/Hotspots/Venus/Venus.unity
     guid: 9b5b311879cd16844ac5b219e86cfd04
   - enabled: 1
     path: Assets/Scenes/Hotspots/Saturnus/Saturnus.unity
     guid: ea4ea8e1204f1e442863207670491245
   - enabled: 1
-    path: Assets/Scenes/Hotspots/Mars.unity
+    path: Assets/Scenes/Hotspots/Mars/Mars.unity
     guid: 61d243c8e230c3944a1a6bfb04d340a8
   - enabled: 0
     path: Assets/Scenes/Brian/Pan/Pan.unity
     guid: d9a0fb4503584d343adb057670b94da4
   - enabled: 1
-    path: Assets/Scenes/Hotspots/Uranus.unity
+    path: Assets/Scenes/Hotspots/Uranus/Uranus.unity
     guid: 8f8becab315e54447843aae9dbc6bd3c
   - enabled: 1
     path: Assets/Scenes/Hotspots/Jupiter/Jupiter.unity
