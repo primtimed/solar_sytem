@@ -36,6 +36,11 @@ public class SolarSystemManager : MonoBehaviour
             }
         }
     }
+    
+    public void StartFiew()
+    {
+        rotating = true;
+    }
 
     public void ReturnPlanets()
     {
